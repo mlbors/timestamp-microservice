@@ -3,7 +3,8 @@ const url = require('url')
 
 const server = http.createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'application/json' })
-  console.log('ok')
+  res.write('Hello World!');
+  res.end();
 })
 
-server.listen(8000)
+server.listen(8080)
