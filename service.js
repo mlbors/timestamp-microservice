@@ -17,7 +17,7 @@ const fromTs = timestamp => {
 
 const fromNatural = date => {
   const ts = date.getTime()
-  return {unixtime: ts, natural: parseTimeStamp(ts)}
+  return {unixtime: ts/1000, natural: parseTimeStamp(ts)}
 }
 
 const prepareDate = str => {
