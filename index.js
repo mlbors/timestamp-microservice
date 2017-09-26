@@ -10,11 +10,6 @@ const server = http.createServer((req, res) => {
 
   if (req.method === 'GET') {
 
-    if (req.url === '/favicon.ico') {
-        res.writeHead(200, {'Content-Type': 'image/x-icon'} )
-        return res.end()
-    }
-    
     const path = url.parse(req.url).pathname.slice(1).replace(/%20/g, ' ')
     
     res.writeHead(200, {'Content-Type': 'application/json'})    
